@@ -3,7 +3,7 @@
 
 A short game that will test your aim. If you are into hardcore FPS shooters 
 than this will be a great tool for practicing aim. Dive into a fast and responsive environment where
-every movement matters. A small click outside a target will leave a mark.
+every movement matters. Every miss is counted against you and will be subtracted fromt he total score.
 
 <a href="https://www.codinghole.com/warmup" align="left">
     <img src="images/image1.png" alt="Logo" width="350" height="215">
