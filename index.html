@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WarmUp</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/myAvatar.jpg">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JQuery minified script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Game Music Control -->
+    <audio id="gameMusic"></audio>
+
+    <!-- Game Sound Effects -->
+    <audio id="gameSoundEffects"></audio>
+
+    <!-- Main container for game -->
+    <div id="gameContainer">
+
+      <!-- Game Menu -->
+      <div id="gameMenu" class="animated fadeIn">
+
+        <!-- Click to play timed mode -->
+        <button id="playTimed" class="animated">Timed</button>
+
+        <!-- Click to play endless mode -->
+        <button id="playEndless" class="animated">Endless</button>
+      </div>
+
+      <!-- Game Canvas this will hold all game options/timer/score and window that game will be displayed in-->
+      <div id="gameCanvas" class="noSelect" style="display: none;">
+
+        <!-- Game Header (Timer,Score,Game Options) -->
+        <div id="gameHeader" class="animated fadeInUp">
+
+          <!-- Game Stats -->
+          <div id="gameStats">
+            <i id="hits" class="fas fa-crosshairs"> 0</i>
+            <i id="misses" class="fas fa-times"> 0</i>
+          </div>
+
+          <!-- Game Timer -->
+          <h2 id="gameTimer"></h2>
+
+          <!-- Game Options -->
+          <div id="gameOptions">
+
+            <!-- Play audio button -->
+            <button id="btnPlayAudio"><i class="fas fa-volume-up"></i></button>
+
+            <!-- Stop audio button -->
+            <button id="btnStopAudio" style="display: none;"><i class="fas fa-volume-mute"></i></button>
+
+            <!-- Game Restart Button -->
+            <button id="btnRestart"><i class="fas fa-undo"></i></button>
+          </div>
+        </div>
+
+        <!-- Game Countdown -->
+        <h2 id="gameCountdown" class="animated fadeInRight"></h2>
+
+        <!-- div to hold targets -->
+        <div id="targetBox"></div>
+
+        <!-- Game Over! -->
+        <div id="gameScore" class="animated bounceIn">
+          <h1 id="finalHits"></h1>
+          <h1 id="finalMisses"></h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile warning message .. can only be played on desktop -->
+    <h1 id="mobileWarning" class="noSelect zoom animated fadeIn zoomIn">Screen To Small</h1>
+    
+    <!-- Game scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/handler.js"></script>
+  </body>
+</html>

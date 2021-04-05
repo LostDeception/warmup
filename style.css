@@ -1,0 +1,255 @@
+:root
+{
+    --white: #ffffff;
+    --calm-gray: #99aab5;
+    --min-gray: #7b91a0;
+    --dark-gray: #111;
+    --dark: #23272a;
+    --dark-two: #2c2f33;
+    --dark-three: #232528;
+    --dark-four: #111113;
+    --dark-five: #1a1d20;
+
+    --calm-lime:#51d69d;
+    --hot-pink: #fc03f8;
+    --bright-blue: #38e1ff;
+    --bright-yellow: #cbd11f;
+    --bright-red: #d4473d;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-four);
+    overflow: hidden;
+}
+
+p, h1, h2
+{
+    font-weight: bold;
+}
+
+/* Game Container */
+#gameContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Game Menu */
+#gameMenu button
+{
+    width: 300px;
+    height: 350px;
+    margin: 15px;
+    font-size: 35px;
+    border: 3px solid var(--calm-lime);
+    border-radius: 10px;
+    outline: none;
+}
+#gameMenu button:hover {
+    cursor: pointer;
+    transition: all 0.5s;
+    transform: scale(1.05);
+}
+
+/* Game Header styles */
+#gameHeader
+{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85px;
+
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+/* Game Canvas styles */
+#gameCanvas
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Button To Start Game */
+#btnPlay
+{
+    font-size: min(15vw,100px);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#btnRestart,
+#btnStopAudio,
+#btnPlayAudio {
+    cursor: pointer;
+}
+
+/* Game Stats */
+#gameStats
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+    font-size: 35px;
+}
+
+#gameStats i
+{
+    margin-left: 15px;
+}
+
+/* Game Options Menu */
+#gameOptions
+{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 50px;
+    margin: 15px;
+}
+
+/* All buttons in game options menu */
+#gameOptions button
+{
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    border: none;
+    outline: none;
+    color: var(--calm-lime);
+}
+
+#gameTimer
+{
+    position: absolute;
+    top: 15px;
+    font-size: 50px;
+    color: var(--calm-lime);
+}
+
+#gameCountdown
+{
+    font-size: 125px;
+    color: var(--calm-lime);
+}
+
+/* Game target stylese */
+.target
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--dark-five);
+    font-size: 45px;
+    color: var(--calm-lime);
+    border: 3px solid var(--calm-lime);
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* Div to append targets to */
+#targetBox
+{
+    display:none;
+    width:100%;
+    height:100%;
+    margin: 50px;
+}
+
+.pulse {
+    font-size: 35px;
+    animation-duration: 1s; /* don't forget to set a duration! */
+}
+
+/* Score at end of game */
+#gameScore
+{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--calm-lime);
+}
+
+#finalHits{font-size: 55px;color: var(--calm-lime);}
+#finalMisses{font-size: 35px;color: var(--bright-red);}
+
+/* Default button template */
+button
+{
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--min-gray);
+}
+
+#mobileWarning
+{
+    display: none;
+    color: white;
+}
+
+/* Medium devices (tablets, 1200px and up) */
+@media (max-width: 1200px) 
+{
+    #gameContainer{display: none;}
+    #mobileWarning{display: block;}
+}
+
+/* Small devices (landscape phones, 850px and up) */
+@media (max-height: 850px) 
+{
+    #gameContainer{display: none;}
+    #mobileWarning{display: block;}
+}
+
+/* HELPERS */
+
+/*No Select On Element*/
+.noSelect
+{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
+#hits {
+    color: #5ae88a;
+}
+#misses {
+    color: #d4473d;
+}
