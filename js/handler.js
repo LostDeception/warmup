@@ -98,6 +98,9 @@ function startGame()
 {
     try
     {
+        timer = 60;
+        countdown = 3;
+
         // add classes to countdown text for fade in left animate.css effect
         countdownText.innerHTML = 3;
         countdownText.style.display = 'flex';
@@ -259,9 +262,6 @@ function restart()
 {
     try
     {
-        countdown = 3;
-        timer = 60;
-
         clearRandomTargets();
         clearInterval(gameInterval);
         gameInterval = null;

@@ -14,10 +14,6 @@ var songs =
     "Jetsons - Cxdy",
     "Rage - Cxdy",
     "Triforce - Cxdy", 
-    "Chase - The Brothers Records",
-    "Life After Death - DJ Freedem",
-    "Savior Search - DJ Freedem",
-    "Demon - JVNA",
     "Beside Me - Patrick Patrikios"
 ];
 
