@@ -170,10 +170,7 @@ function displayCountdown(seconds)
         {
             countdownText.innerHTML = "GO!";
             countdownText.classList.add('animate__animated', 'animate__bounceOut');
-            countdownText.addEventListener('animationend', () => {
-                countdownText.style.display = 'none';
-                countdownText.classList.remove('animate__animated','animate__bounceOut');
-            }, {once: true});
+            countdownText.addEventListener('animationend', countdownAnimEnd, false);
         }
         else
         {
@@ -182,6 +179,13 @@ function displayCountdown(seconds)
 
         seconds--;
     }
+}
+
+function countdownAnimEnd() {
+    countdownText.style.display = 'none';
+    countdownText.classList.remove('animate__animated','animate__bounceOut');
+    countdownText.removeEventListener('animationend', countdownAnimEnd, false);
+                
 }
 
 function createTarget()
