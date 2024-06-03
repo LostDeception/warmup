@@ -1,9 +1,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A short game that will test your aim. If you are into hardcore FPS shooters 
-than this will be a great tool for practicing aim. Dive into a fast and responsive environment where
-every movement matters. Every miss is counted against you and will be subtracted from the total score.
+Step into a brief yet intense game designed to sharpen your aim. Whether you're a hardcore FPS 
+enthusiast or aiming to enhance your accuracy, this game is tailored for you. Immerse yourself in a 
+swift and highly responsive environment where precision is paramount. Every move you make is crucial, 
+as each miss deducts from your total score.
 
 <a href="https://www.codinghole.com/warmup" align="left">
     <img src="images/image1.png" alt="Logo" width="350" height="215">
